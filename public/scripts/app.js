@@ -11,6 +11,11 @@ angular
   // the second argument is a function that defines the capacities
   // of the controller.
 
+AlbumsIndexController.$inject = ['$http'];
+function AlbumsIndexController (  $http  ) {
+  ...
+}
+
 function AlbumsIndexController () {
   var vm = this;
   vm.newAlbum = {};
