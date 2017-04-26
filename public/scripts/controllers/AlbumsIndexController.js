@@ -2,12 +2,12 @@ angular
   .module('tunely')
   .controller('AlbumsIndexController', AlbumsIndexController);
 
-	AlbumsIndexController.$inject = ['$http'];
-  
-	function AlbumsIndexController ($http) {
+AlbumsIndexController.$inject = ['$http'];
+
+function AlbumsIndexController ($http) {
   var vm = this;
   vm.newAlbum = {};
-  vm.newAlbum = { 
+  vm.newAlbum = {
     name: 'Viva Hate',
     artistName: 'Morrissey'
   };
