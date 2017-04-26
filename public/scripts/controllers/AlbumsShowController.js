@@ -3,14 +3,18 @@ angular
   .controller('AlbumsShowController', AlbumsShowController);
 
 AlbumsShowController.$inject = ['$http', '$routeParams'];
-function AlbumsShowController (  $http,   $routeParams  ) {
+
+function AlbumsShowController ($http, $routeParams) {
   var vm = this;
-  console.log($routeParams);
+  vm.newSong = {};
 
   $http({
     method: 'GET',
-    url: '/api/albums/'+  // how can we get the id? (hint: check console log from above)
+    url: '/api/albums/'+$routeParams.id
   }).then(function successCallback(json) {
     vm.album = json.data;
+  }, function errorCallback(response) {
+    console.log('There was an error getting the data', response);
   });
+
 }
