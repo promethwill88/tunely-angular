@@ -31,6 +31,9 @@
                       <h4 class="inline-header">Songs:</h4>
                       <div class="list-group-item" ng-repeat="song in albumsShowCtrl.album.songs">
                         ({{song.trackNumber}}){{song.name}}
+                      <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Song</button>
+                      <button class='btn btn-success' ng-show="editing" ng-click="albumsShowCtrl.editAlbum(album); editing = false">Save Changes</button>
+                      <button class='btn btn-danger' ng-click="albumsShowCtrl.deleteSong(song)">Delete Song</button>
                       </div>
                     </li>
                   </ul>

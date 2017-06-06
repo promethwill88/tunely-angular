@@ -7,6 +7,7 @@
 angular
   .module('tunely', ['ngRoute'])
   .config(config);
+  
 
 config.$inject = ['$routeProvider', '$locationProvider'];
 
